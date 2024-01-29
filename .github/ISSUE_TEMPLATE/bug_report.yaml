@@ -1,0 +1,88 @@
+name: Bug report
+description: Create a report to help us improve something that is not working correctly
+title: "[BUG]:  <brief description of the issue>"
+labels: ["Needs Review", "Bug"]
+projects: "Argo-Student-Robotics-Team/3"
+assignees:
+        - cyancat529
+body:
+        -       type: markdown
+                attributes:
+                        value: Thank you for taking the time to submit a bug report. In order to get issues closed in a reasonable amount of time, you must include a baseline of information about the bug in question.
+        -       type: textarea
+                id: bug-report
+                attributes:
+                        label: Bug description
+                        description: A clear and concise description of what the bug is. Include any screenshots that may help show the bug in action.
+                validations:
+                        required: true
+        -       type: dropdown
+                id: version
+                attributes:
+                        label: What software version does this issue occur on?
+                        multiple: true
+                        options:
+                                - 0.1.0
+                                - Other
+                validations:
+                        required: true
+        -       type: textarea
+                id: reproduction-steps
+                attributes:
+                        label: How to reproduce
+                        description: A clear set of steps to reproduce the bug. Please include as much detail as possible to help reproduce it.
+                validations:
+                        required: true
+        -       type: textarea
+                id: expected-behavior
+                attributes:
+                        label: Expected behavior
+                        description: A brief description of what you expected to happen.
+                validations:
+                        required: true
+        -       type: dropdown
+                id: os
+                attributes:
+                        label: What OS are you using?
+                        multiple: true
+                        options:
+                                - Ubuntu Server 22.04.3 LTS
+                                - Raspberry Pi OS 64-bit
+                validations:
+                        required: true
+        -       type: textarea
+                id: hardware
+                attributes:
+                        label: Hardware specifications
+                        description: What hardware was the software run on?
+                validations:
+                        required: true
+        -       type: dropdown
+                id: priority
+                attributes:
+                        label: What is the priority of the issue?
+                        options:
+                                - P1
+                                - P2
+                                - P3
+                                - P4
+                validations:
+                        required: true
+        -       type: dropdown
+                id: severity
+                attributes:
+                        label: What is the severity of the issue?
+                        options:
+                                - S1
+                                - S2
+                                - S3
+                                - S4
+                validations:
+                        required: true
+        -       type: textarea
+                id: additional-comments
+                attributes:
+                        label: Additional Comments
+                        description: "Anything else you'd like to mention regarding the issue"
+                validations:
+                        required: false
